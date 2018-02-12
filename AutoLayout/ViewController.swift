@@ -10,16 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBOutlet weak var hieghtOfBottomViews: NSLayoutConstraint!
+
+    var isFifty = true
+
+    @IBAction func changeHeight(_ sender: UIButton) {
+        if isFifty {
+            self.hieghtOfBottomViews.constant = 50
+        } else {
+            self.hieghtOfBottomViews.constant = 100
+        }
+
+        UIView.animate(withDuration: 1) {
+            self.view.layoutIfNeeded()
+        }
+
+        self.isFifty = !self.isFifty
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

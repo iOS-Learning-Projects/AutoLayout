@@ -24,12 +24,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MmX-Bq-Fed">
-                                <rect key="frame" x="26" y="523.5" width="158.5" height="133.5"/>
+                                <rect key="frame" x="26" y="517" width="158.5" height="140"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="80N-is-8KX">
-                                <rect key="frame" x="190.5" y="523.5" width="158.5" height="133.5"/>
+                                <rect key="frame" x="190.5" y="517" width="158.5" height="140"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="rH1-fM-HBk"/>
+                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJf-BR-FHJ">
                                 <rect key="frame" x="26" y="30" width="65" height="50"/>
@@ -38,9 +41,12 @@
                                     <constraint firstAttribute="width" constant="65" id="jwa-Ns-QbG"/>
                                 </constraints>
                                 <state key="normal" title="Alterar"/>
+                                <connections>
+                                    <action selector="changeHeight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WhG-EC-wPn"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H65-LW-paC">
-                                <rect key="frame" x="26" y="90" width="323" height="423.5"/>
+                                <rect key="frame" x="26" y="90" width="323" height="417"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="szE-0p-5Kv">
@@ -64,16 +70,18 @@
                             <constraint firstAttribute="trailingMargin" secondItem="H65-LW-paC" secondAttribute="trailing" constant="10" id="ODK-kf-fYV"/>
                             <constraint firstItem="80N-is-8KX" firstAttribute="bottom" secondItem="MmX-Bq-Fed" secondAttribute="bottom" id="P3H-r0-P1d"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="80N-is-8KX" secondAttribute="bottom" constant="10" id="PUt-8x-hiP"/>
+                            <constraint firstItem="MmX-Bq-Fed" firstAttribute="height" secondItem="80N-is-8KX" secondAttribute="height" id="TyL-zS-rDc"/>
                             <constraint firstItem="MmX-Bq-Fed" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="U71-hB-bwL"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MmX-Bq-Fed" secondAttribute="bottom" constant="10" id="W2B-Vh-ybC"/>
                             <constraint firstItem="szE-0p-5Kv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="gFx-kf-jBb"/>
-                            <constraint firstItem="MmX-Bq-Fed" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="lYq-3o-ePA"/>
                             <constraint firstItem="MmX-Bq-Fed" firstAttribute="top" secondItem="H65-LW-paC" secondAttribute="bottom" constant="10" id="oko-8j-j3d"/>
                             <constraint firstItem="H65-LW-paC" firstAttribute="top" secondItem="vJf-BR-FHJ" secondAttribute="bottom" constant="10" id="saN-tq-BVQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="szE-0p-5Kv" secondAttribute="trailing" constant="10" id="v3Z-hw-pkB"/>
-                            <constraint firstItem="80N-is-8KX" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="vpa-N2-6FV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hieghtOfBottomViews" destination="rH1-fM-HBk" id="Mbc-3t-6vt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
